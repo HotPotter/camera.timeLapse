@@ -19,10 +19,11 @@ def main():
     script = args.pop(0)
 
     if len(args) < 1:
-        print( 'Usage: python {} <duration> <path to folder>'.format(script))
+        print( 'Usage: python {} <frames per second> <path to folder>'.format(script))
         sys.exit(1)
 
-    duration = float(args[0])
+    frames_per_second = int(args[0])
+    duration = float(1/frames_per_second)
     input_dir = args[1]
     filenames = [os.path.join(input_dir, i )for i in os.listdir(input_dir)]
 
