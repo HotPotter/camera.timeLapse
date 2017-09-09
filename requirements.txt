@@ -1,1 +1,2 @@
 imageio==2.2.0
+picamera==1.13
